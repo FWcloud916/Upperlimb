@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML>
+<!--
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>回顧複習</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-loading">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="#" class="logo" style="font-family:'Microsoft JhengHei';">回顧複習</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <ul class="links">
+                    <li><a href="tendon_index.html">Home</a></li>
+                    <li><a href="tendon_introduce.html">介紹</a></li>
+                    <li><a href="test.php">測驗</a></li>
+                    <li id="active4"><a href="tendon_review.html">回顧</a></li>
+                    <li><a href="tendon_contact.html">諮詢</a></li>
+                </ul>
+            </ul>
+
+        </nav>
+
+        <footer id="footer">
+            <section class="split contact">
+                <div>
+                    <span class="image fit" style="margin:0rem 0rem;">
+                        <img id="r1" src="images/light/nolight.png" alt="" onclick="changeImg()" style="cursor:pointer;" />
+                    </span>
+                    <span class="image fit" style="margin:0rem 0rem;">
+                        <img id="r2" src="images/light/nolight.png" alt="" onclick="changeImg1()" style="cursor:pointer;" />
+                    </span>
+                </div>
+            </section>
+            <section class="split contact">
+                <div>
+                    <span class="image fit" style="margin:0rem 0rem;">
+                        <img id="r3" src="images/light/nolight.png" alt="" onclick="changeImg2()" style="cursor:pointer;" />
+                    </span>
+                    <span class="image fit" style="margin:0rem 0rem;">
+                        <img id="r4" src="images/light/nolight.png" alt="" onclick="changeImg3()" style="cursor:pointer;" />
+                    </span>
+                </div>
+            </section>
+
+
+
+            <!-- Post -->
+
+
+
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        var add = (function () {
+            var counter = 0;
+            return function () { return counter += 1; }
+        })();
+        function changeImg() {
+            var c = add();
+            if (c == 1 || c % 2 === 0) {
+                document.getElementById('r1').src = 'images/light/light1.png';
+            } else {
+                document.getElementById('r1').src = 'images/light/nolight.png';
+            }
+        }
+        function changeImg1() {
+            var c = add();
+            if (c == 1 || c % 2 === 0) {
+                document.getElementById('r2').src = 'images/light/light2.png';
+            } else {
+                document.getElementById('r2').src = 'images/light/nolight.png';
+            }
+        }
+        function changeImg2() {
+            var c = add();
+            if (c == 1 || c % 2 === 0) {
+                document.getElementById('r3').src = 'images/light/light3.png';
+            } else {
+                document.getElementById('r3').src = 'images/light/nolight.png';
+            }
+        }
+        function changeImg3() {
+            var c = add();
+            if (c == 1 || c % 2 === 0) {
+                document.getElementById('r4').src = 'images/light/light4.png';
+            } else {
+                document.getElementById('r4').src = 'images/light/nolight.png';
+            }
+        }
+    </script>
+
+</body>
+</html>
