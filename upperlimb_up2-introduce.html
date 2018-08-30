@@ -6,12 +6,17 @@
 -->
 <html>
 <head>
-    <title>Elements Reference - Massively by HTML5 UP</title>
+    <title>復健方式</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/up2-introduce.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 </head>
+
 <body class="is-loading">
 
     <!-- Wrapper -->
@@ -19,10 +24,207 @@
 
         <!-- Header -->
         <header id="header">
-            <a href="#" id="tt" class="logo" style="font-family:'Microsoft JhengHei';">復健方式-需手術</a>
+            <a href="#" id="tt" class="logo" style="font-family:'Microsoft JhengHei';">復健方式</a>
         </header>
 
         <!-- Nav -->
+        <nav id="nav">
+            <ul class="links clearfix">
+                <li><a style="cursor:pointer;" a href="upperlimb_introduce.html">回介紹</a></li>
+                <li><a href="#tab1" onclick="myFunction()">需手術</a></li>
+                <li><a href="#tab2" onclick="myFunction1()">不需手術</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main" style="padding:0px;">
+            <section style="padding:0px;">
+                <center style="padding:0px;">
+                    <div id="tab1" class="content" style="padding:2%;">
+                        <div class="weekbox">
+                            <button id="btnweek1" class="btnweek activeweek" onclick="btnweek1()">1-2週</button>
+                            <button id="btnweek2" class="btnweek" onclick="btnweek2()">3-4週</button>
+                            <button id="btnweek3" class="btnweek" onclick="btnweek3()">5-6週</button>
+                            <button id="btnweek4" class="btnweek" onclick="btnweek4()">7-8週</button>
+                            <button id="btnweek5" class="btnweek" onclick="btnweek5()">9週以後</button>
+                        </div>
+                        <div id="flexor">
+                            <div class="flexor1">
+                                <div class="flexor_warpper">
+                                    <ol>
+                                        <li>
+                                            穿戴副木
+                                            <ul style="margin:0 0 15px 10px;">
+                                                <li>需穿戴副木<i id="myImg1" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                                <li>依受傷位置給予不同形式之副木(注意事項：避免移除副木而造成骨頭錯位位移)</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            傷口照護
+                                            <ul style="margin:0 0 15px 10px;">
+                                                <li>若患部有骨釘固定或未癒合之傷口，切忌碰到水或碰觸不潔物<i id="myImg2" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            水腫控制與預防技巧
+                                            <ul style="margin:0 0 15px 10px;">
+                                                <li>將手抬高至心臟高度<i id="myImg3" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                                <li style="margin-top:-15px;">拆線傷口癒合後，可做向心按摩(從手指末端朝手肘方向按摩)<i id="myImg4" class="fa fa-file-video-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                    <i class="fa fa-bookmark" style="float:left;color:lightcoral;padding-top:60px;"><a id="myImg5" style="cursor:pointer;border-bottom:none !important;font-family:'Microsoft JhengHei UI';font-size:20px;color:lightcoral;">&nbsp;&nbsp;&nbsp;【圖解】骨釘固定</a></i>
+                                </div>
+                            </div>
+                            <div class="flexor2" style="display:none;">
+                                <div class="flexor_warpper">
+                                    <ol>
+                                        <li>術後滿兩週時經醫師評估後可轉介復健部職能治療，訂定後續復健計畫</li>
+                                        <li>經醫師及治療師評估後移除副木</li>
+                                        <li>可做保護性的主動關節活動運動</li>
+                                        <li>可於患部執行緩和的按摩 </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="flexor3" style="display:none;">
+                                <div class="flexor_warpper">
+                                    <ol>
+                                        <li>可做保護性的、緩和的被動關節活動運動，以預防掌指關節(MPJ)僵硬在伸直的姿勢、指間關節(IPJ)僵硬在彎曲的姿勢</li>
+                                        <li>滿六週後，將再以X光檢查骨頭癒合情形，若癒合理想可移除骨釘</li>
+                                        <li>此階段應避免執行負重的工作</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="flexor4" style="display:none;">
+                                <div class="flexor_warpper">
+                                    <ol>
+                                        <li>若有關節變形，可穿戴矯治型副木改善<i id="myImg6" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                        <li style="margin-top:15px;">可利用按摩、肌腱滑動運動(tendon gliding exercise)、阻斷性運動(blocking exercise)等運動，減少沾黏、盡可能回復主動關節活動度<br />【動作示範】肌腱滑動運動<i id="myImg7" class="fa fa-file-video-o" style="cursor:pointer;margin-left:5px;"></i>、阻斷性運動<i id="myImg8" class="fa fa-file-video-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                        <li style="margin-top:15px;">本階段可開始進行一般輕量日常生活活動(如拿衛生紙、洗臉)<i id="myImg9" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                        <li style="margin-top:15px;">開始輕阻力訓練(1-3磅)<i id="myImg10" class="fa fa-file-video-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                        <li style="margin-top:15px;">持續避免執行過度負重的工作</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="flexor5" style="display:none;">
+                                <div class="flexor_warpper">
+                                    <ol>
+                                        <li>此階段重點為強化肌力，依需求經治療師評估持續復健<br />【動作示範】重阻力(握力器)<i id="myImg11" class="fa fa-file-video-o" style="cursor:pointer;margin-left:5px;"></i>、鎖螺絲<i id="myImg12" class="fa fa-file-video-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                        <li style="margin-top:15px;">競賽性體育活動或極重的負重工作應於術後6個月後始可執行較安全</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- The Modal -->
+                    <div id="myModal1" class="modal">
+                        <span class="close1">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption1"></div>
+                    </div>
+                    <div id="myModal2" class="modal">
+                        <span class="close2">&times;</span>
+                        <img class="modal-content" id="img02">
+                        <div id="caption2"></div>
+                    </div>
+                    <div id="myModal3" class="modal">
+                        <span class="close3">&times;</span>
+                        <img class="modal-content" id="img03">
+                        <div id="caption3"></div>
+                    </div>
+                    <div id="myModal4" class="modal">
+                        <span class="close4">&times;</span>
+                        <img class="modal-content4" id="img04">
+                        <div id="caption4"></div>
+                    </div>
+                    <div id="myModal5" class="modal">
+                        <span class="close5">&times;</span>
+                        <img class="modal-content" id="img05">
+                        <div id="caption5"></div>
+                    </div>
+                    <div id="myModal6" class="modal">
+                        <span class="close6">&times;</span>
+                        <img class="modal-content" id="img06">
+                        <div id="caption6"></div>
+                    </div>
+                    <div id="myModal7" class="modal">
+                        <span class="close7">&times;</span>
+                        <img class="modal-content" id="img07">
+                        <div id="caption7"></div>
+                    </div>
+                    <div id="myModal8" class="modal">
+                        <span class="close8">&times;</span>
+                        <img class="modal-content" id="img08">
+                        <div id="caption8"></div>
+                    </div>
+                    <div id="myModal9" class="modal">
+                        <span class="close9">&times;</span>
+                        <img class="modal-content" id="img09">
+                        <div id="caption9"></div>
+                    </div>
+                    <div id="myModal10" class="modal">
+                        <span class="close10">&times;</span>
+                        <img class="modal-content" id="img10">
+                        <div id="caption10"></div>
+                    </div>
+                    <div id="myModal11" class="modal">
+                        <span class="close11">&times;</span>
+                        <img class="modal-content4" id="img11">
+                        <div id="caption11"></div>
+                    </div>
+                    <div id="myModal12" class="modal">
+                        <span class="close12">&times;</span>
+                        <img class="modal-content4" id="img12">
+                        <div id="caption12"></div>
+                    </div>
+
+                    <div id="tab2" class="content" style="display:none;padding:2%;">
+                        <ul class="actions fit clearfix">
+                            <li><a href="#tab3" class="button special fit" onclick="toggleVideo1(),toggleVideo2('hide')" style="font-family:'Microsoft JhengHei';font-size:20px;">徒手復位</a></li>
+                            <li><a href="#tab4" class="button special fit" onclick="toggleVideo1('hide'),toggleVideo2()" style="font-family:'Microsoft JhengHei';font-size:20px;">石膏固定</a></li>
+                        </ul>
+                        <div id="tab3" class="content" style="padding:2%;">
+                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/wdxZRtfiDJE?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div id="tab4" class="content" style="display:none;padding:2%;">
+                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/hmC3C2Gi5gs?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </center>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/up2-introduce.js"></script>
+    <script>
+        function myFunction() {
+            document.getElementById("tt").innerHTML = "復健方式 — 需手術";
+        }
+        function myFunction1() {
+            document.getElementById("tt").innerHTML = "復健方式 — 不需手術";
+        }
+    </script>
+</body>
+
+<!--<body class="is-loading">
+
+    <div id="wrapper">
+
+        <header id="header">
+            <a href="#" id="tt" class="logo" style="font-family:'Microsoft JhengHei';">復健方式-需手術</a>
+        </header>
+
         <nav id="nav">
             <ul class="links clearfix">
                 <li><a style="cursor:pointer;" a href="upperlimb_introduce.html">回介紹</a></li>
@@ -30,7 +232,6 @@
                 <li><a href="#tab2" onclick="myFunction(),toggleVideo('hide')">不需手術</a></li>
             </ul>
         </nav>
-        <!-- Main -->
         <div id="main" style="padding:0px;">
             <section style="padding:0px;">
                 <center style="padding:0px;">
@@ -53,7 +254,6 @@
             </section>
         </div>
     </div>
-    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -101,5 +301,6 @@
             iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
         }
     </script>
-</body>
+</body>-->
+
 </html>
