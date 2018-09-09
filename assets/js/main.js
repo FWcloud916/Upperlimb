@@ -266,3 +266,21 @@
     });
 
 })(jQuery);
+
+function weekChange(id) {
+    var url = location.href;
+    var targetTab = url.split("#")[1];
+
+    var wtotal = document.getElementById(targetTab).children[0].children.length;
+    for (var i = 0; i < wtotal; i++) {
+        document.getElementById(targetTab).children[0].children[i].className = "weekbtn"
+    }
+    var btotal = document.getElementById(targetTab).children.length - 1;
+    for (var i = 0; i < btotal; i++) {
+        document.getElementById(targetTab).children[i + 1].style.display = "none"
+    }
+    document.getElementById(targetTab).children[id].style.display = "block"
+    document.getElementById(targetTab).children[0].children[id - 1].className = "weekbtn weekbtnactive"
+
+
+}
