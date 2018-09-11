@@ -75,11 +75,11 @@
             var $li = $('ul.clearfix li');
 
             // 進入時預設點擊第一個頁籤，除了第一個 content 其他 content 隱藏
-            $($li.eq(0).addClass('active').find('a').attr('href')).siblings('.content').hide();
+            $($li.eq(1).addClass('active').attr('id','active4').find('a').attr('href')).siblings('.content').hide();
 
             $li.click(function () {
                 $($(this).find('a').attr('href')).show().siblings('.content').hide();
-                $(this).addClass('active').siblings('.active').removeClass('active');
+                $(this).addClass('active').attr('id','active4').siblings('.active').removeClass('active').removeAttr('id','active4');
             });
         });
         //function play() {

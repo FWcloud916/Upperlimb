@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<!--
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Elements Reference - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <style>
+        #header .logo:hover {
+            -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, -moz-transform 0.5s ease, visibility 0.5s !important;
+            -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, -webkit-transform 0.5s ease, visibility 0.5s !important;
+            -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, -ms-transform 0.5s ease, visibility 0.5s !important;
+            transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s !important;
+            -moz-pointer-events: auto !important;
+            -webkit-pointer-events: auto !important;
+            -ms-pointer-events: auto !important;
+            pointer-events: auto !important;
+            border-style: solid;
+            border-color: #ffffff !important;
+            color: #ffffff !important;
+            border-width: 5px !important;
+            font-size: 2.25rem !important;
+            font-weight: 900 !important;
+            letter-spacing: 0.075em !important;
+            line-height: 1 !important;
+            padding: 1rem 1.75rem !important;
+            text-transform: uppercase !important;
+            visibility: visible !important;
+        }
+        img {
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body class="is-loading">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="#" class="logo" style="font-family:'Microsoft JhengHei';">肌腱小測驗</a>
+        </header>
+        <!-- Nav -->
+
+        <!-- Main -->
+        <div id="main" style="padding:0px;">
+            <section>
+                <center>
+                    <button class="button button5" onclick="location.href='introduce.html'">回介紹</button>
+                </center>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(function () {
+            var $li = $('ul.clearfix li');
+
+            // 進入時預設點擊第一個頁籤，除了第一個 content 其他 content 隱藏
+            $($li.eq(1).addClass('active').attr('id', 'active4').find('a').attr('href')).siblings('.content').hide();
+
+            $li.click(function () {
+                $($(this).find('a').attr('href')).show().siblings('.content').hide();
+                $(this).addClass('active').attr('id', 'active4').siblings('.active').removeClass('active').removeAttr('id', 'active4');
+            });
+        });
+    </script>
+
+</body>
+</html>

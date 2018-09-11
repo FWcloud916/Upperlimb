@@ -47,20 +47,40 @@
             <section class="split contact">
                 <div>
                     <span class="image fit" style="margin:0rem 0rem;">
-                        <img id="r1" src="images/light/nolight.png" alt="" onclick="changeImg()" style="cursor:pointer;" />
+                        <img id="r1" src="images/light/nolight.png" alt="" onclick="changeImgLight('r1','images/light/light1.png')" style="cursor:pointer;" />
                     </span>
                     <span class="image fit" style="margin:0rem 0rem;">
-                        <img id="r2" src="images/light/nolight.png" alt="" onclick="changeImg1()" style="cursor:pointer;" />
+                        <img id="r2" src="images/light/nolight.png" alt="" onclick="changeImgLight('r2','images/light/light1-2.png')" style="cursor:pointer;" />
                     </span>
                 </div>
             </section>
             <section class="split contact">
                 <div>
                     <span class="image fit" style="margin:0rem 0rem;">
-                        <img id="r3" src="images/light/nolight.png" alt="" onclick="changeImg2()" style="cursor:pointer;" />
+                        <img id="r3" src="images/light/nolight.png" alt="" onclick="changeImgLight('r3','images/light/light2.png')" style="cursor:pointer;" />
                     </span>
                     <span class="image fit" style="margin:0rem 0rem;">
-                        <img id="r4" src="images/light/nolight.png" alt="" onclick="changeImg3()" style="cursor:pointer;" />
+                        <img id="r4" src="images/light/nolight.png" alt="" onclick="changeImgLight('r4','images/light/light2-2.png')" style="cursor:pointer;" />
+                    </span>
+                </div>
+            </section>
+            <section class="split contact">
+                <div>
+                    <span class="image fit" style="margin:0rem 0rem;">
+                        <img id="r5" src="images/light/nolight.png" alt="" onclick="changeImgLight('r5','images/light/light3.png')" style="cursor:pointer;" />
+                    </span>
+                    <span class="image fit" style="margin:0rem 0rem;">
+                        <img id="r6" src="images/light/nolight.png" alt="" onclick="changeImgLight('r6','images/light/light3-2.png')" style="cursor:pointer;" />
+                    </span>
+                </div>
+            </section>
+            <section class="split contact">
+                <div>
+                    <span class="image fit" style="margin:0rem 0rem;">
+                        <img id="r7" src="images/light/nolight.png" alt="" onclick="changeImgLight('r7','images/light/light4.png')" style="cursor:pointer;" />
+                    </span>
+                    <span class="image fit" style="margin:0rem 0rem;">
+                        <img id="r8" src="images/light/nolight.png" alt="" onclick="changeImgLight('r8','images/light/light4-2.png')" style="cursor:pointer;" />
                     </span>
                 </div>
             </section>
@@ -82,40 +102,13 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        var add = (function () {
-            var counter = 0;
-            return function () { return counter += 1; }
-        })();
-        function changeImg() {
-            var c = add();
-            if (c == 1 || c % 2 === 0) {
-                document.getElementById('r1').src = 'images/light/light1.png';
+        function changeImgLight(r, path) {
+            var now = document.getElementById(r).src;
+            console.log(now );
+            if (now.indexOf('nolight.png')!=-1) {
+                document.getElementById(r).src =  path;
             } else {
-                document.getElementById('r1').src = 'images/light/nolight.png';
-            }
-        }
-        function changeImg1() {
-            var c = add();
-            if (c == 1 || c % 2 === 0) {
-                document.getElementById('r2').src = 'images/light/light2.png';
-            } else {
-                document.getElementById('r2').src = 'images/light/nolight.png';
-            }
-        }
-        function changeImg2() {
-            var c = add();
-            if (c == 1 || c % 2 === 0) {
-                document.getElementById('r3').src = 'images/light/light3.png';
-            } else {
-                document.getElementById('r3').src = 'images/light/nolight.png';
-            }
-        }
-        function changeImg3() {
-            var c = add();
-            if (c == 1 || c % 2 === 0) {
-                document.getElementById('r4').src = 'images/light/light4.png';
-            } else {
-                document.getElementById('r4').src = 'images/light/nolight.png';
+                document.getElementById(r).src = 'images/light/nolight.png';
             }
         }
     </script>
