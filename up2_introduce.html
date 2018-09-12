@@ -32,7 +32,6 @@
             <ul class="links clearfix">
                 <li><a style="cursor:pointer;" a href="introduce.html">回介紹</a></li>
                 <li><a href="#tab1" onclick="myFunction()">需手術</a></li>
-                <li><a href="#tab2" onclick="myFunction1()">不需手術</a></li>
             </ul>
         </nav>
 
@@ -181,19 +180,6 @@
                         <div id="caption12"></div>
                     </div>
 
-                    <div id="tab2" class="content" style="display:none;padding:2%;">
-                        <ul class="actions fit clearfix">
-                            <li><a href="#tab3" class="button special fit" onclick="toggleVideo1(),toggleVideo2('hide')" style="font-family:'Microsoft JhengHei';font-size:20px;">徒手復位</a></li>
-                            <li><a href="#tab4" class="button special fit" onclick="toggleVideo1('hide'),toggleVideo2()" style="font-family:'Microsoft JhengHei';font-size:20px;">石膏固定</a></li>
-                        </ul>
-                        <div id="tab3" class="content" style="padding:2%;">
-                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/wdxZRtfiDJE?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div id="tab4" class="content" style="display:none;padding:2%;">
-                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/hmC3C2Gi5gs?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-
                 </center>
             </section>
         </div>
@@ -212,49 +198,10 @@
         function myFunction() {
             document.getElementById("tt").innerHTML = "復健方式 — 需手術";
         }
-        function myFunction1() {
-            document.getElementById("tt").innerHTML = "復健方式 — 不需手術";
-        }
     </script>
 </body>
 
-<!--<body class="is-loading">
 
-    <div id="wrapper">
-
-        <header id="header">
-            <a href="#" id="tt" class="logo" style="font-family:'Microsoft JhengHei';">復健方式-需手術</a>
-        </header>
-
-        <nav id="nav">
-            <ul class="links clearfix">
-                <li><a style="cursor:pointer;" a href="introduce.html">回介紹</a></li>
-                <li><a href="#tab1" onclick="myFunction1(), toggleVideo(), toggleVideo1('hide'), toggleVideo2('hide')">需手術</a></li>
-                <li><a href="#tab2" onclick="myFunction(),toggleVideo('hide')">不需手術</a></li>
-            </ul>
-        </nav>
-        <div id="main" style="padding:0px;">
-            <section style="padding:0px;">
-                <center style="padding:0px;">
-                    <div id="tab1" class="content" style="padding:2%;">
-                        <iframe width="100%" height="560" src="https://www.youtube.com/embed/IUiYlWS-msY?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div id="tab2" class="content" style="display:none;padding:2%;">
-                        <ul class="actions fit clearfix">
-                            <li><a href="#tab3" class="button special fit" onclick="toggleVideo1(),toggleVideo2('hide')">徒手復位</a></li>
-                            <li><a href="#tab4" class="button special fit" onclick="toggleVideo1('hide'),toggleVideo2()">石膏固定</a></li>
-                        </ul>
-                        <div id="tab3" class="content" style="padding:2%;">
-                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/wdxZRtfiDJE?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div id="tab4" class="content" style="display:none;padding:2%;">
-                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/hmC3C2Gi5gs?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </center>
-            </section>
-        </div>
-    </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
